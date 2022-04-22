@@ -1,0 +1,159 @@
+#App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #ebebeb;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #b145db;
+
+    h1 {
+      color: #fff;
+      margin: 8px;
+    }
+  }
+
+  main {
+    width: 450px;
+    height: 150px;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      height: fit-content;
+      width: 95vw;
+    }
+
+    .balanceWrapper {
+      width: 60%;
+      height: 100%;
+      background-color: #ffffff3a;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      color: #fff;
+      overflow: hidden;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 250px;
+      }
+
+      h4 {
+        font-weight: bold;
+        font-size: 3rem;
+        display: inline-block;
+        white-space: nowrap;
+      }
+      h6 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 2.4rem;
+      }
+    }
+    .actionsWrapper {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 240px;        
+      }
+
+      div {
+        width: 100%;
+        height: 100%;
+        background-color: #ffffffaf;
+        border-radius: 8px;
+        transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+
+        span {
+          position: absolute;
+          left: 4px;
+          top: 7px;
+
+          @media (max-width: 768px) {
+           top: 35%;       
+          }
+        }
+
+        button {
+          width: 80px;
+          height: 100%;
+          font-weight: bold;
+          outline: none;
+          border: none;
+          cursor: pointer;
+        }
+        .depositBtn {
+          background-color: #0037adaf;
+          color: #fff;
+          font-size: 2rem;
+
+          &:active {
+            background-color: darken(#0037adaf, 10%);
+          }
+        }
+        .withdrawBtn {
+          background-color: #db7312d8;
+          color: #fff;
+          font-size: 2rem;
+
+          &:active {
+            background-color: darken(#db7312d8, 10%);
+          }
+        }
+        .bankruptBtn {
+          width: 100%;
+          background-color: #df4b31;
+          color: #fff;
+          font-size: 1rem;
+
+          &:active {
+            background-color: darken(#df4b31, 10%);
+          }
+        }
+
+        &:hover {
+          background-color: #ffffff96;
+        }
+
+        input {
+          padding-left: 24px;
+          width: 100%;
+          height: 100%;
+          background-color: #ffffff00;
+          border: none;
+          outline: none;
+          transition: all 0.2s ease-in-out;
+
+          ¨ &:active,
+          &:focus {
+            background-color: #ffffffd5;
+          }
+        }
+      }
+    }
+  }
+}
